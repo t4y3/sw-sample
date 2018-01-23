@@ -1,5 +1,6 @@
 import riot from 'riot';
 import './core/polyfill';
+import flexibility from 'flexibility';
 
 // コンポーネント
 import './components/sw-root/sw-root.tag';
@@ -19,6 +20,8 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  flexibility(document.documentElement);
+
   Promise.resolve().then(() => {
     riot.mount('*');
   });
