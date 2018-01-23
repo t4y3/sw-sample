@@ -4,6 +4,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import buble from 'rollup-plugin-buble'
 import uglify from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
+import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
+import postcssFlexibility from 'postcss-flexibility';
 import cssnext from 'postcss-cssnext';
 
 
@@ -26,6 +28,8 @@ export default [
       postcss({
         sourceMap: 'inline',
         plugins: [
+          postcssFlexibility(),
+          postcssFlexbugsFixes(),
           cssnext({ browsers: AUTOPREFIXER_BROWSERS })
         ]
       }),

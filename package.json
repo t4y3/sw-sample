@@ -57,6 +57,8 @@
     "bowser": "^1.9.1",
     "esr": "^0.9.3",
     "intersection-observer": "^0.5.0",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-flexibility": "^2.0.0",
     "promise-polyfill": "^7.0.0",
     "riot": "^3.8.1",
     "sanitize.css": "^5.0.0",
